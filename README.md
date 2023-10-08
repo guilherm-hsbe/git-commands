@@ -36,6 +36,23 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 | `git commit -m "[mensagem de commit]"` | Confirmar as alterações |
 | `git rm -r [nome-do-arquivo.txt]` | Remover um arquivo (ou pasta) |
 
+### Staging (Patch Interativo: `add -p`)
+| Comando | Descrição |
+| ------- | ----------- |
+| **y** (yes) | Adicione esta parte à área de stage |
+| **n** (no) | Não adicione esta parte à área de stage |
+| **a** (all) | Adicione esta parte e todos os pedaços restantes no arquivo à área de stage |
+| **d** (diff) | Não adicione esta parte nem nenhum dos pedaços restantes no arquivo à área de stage |
+| **g** (select) | Selecione um pedaço para acessar |
+| **/** (search) | Pesquise um pedaço que corresponda à expressão regular fornecida |
+| **j** (undefined-next) | Deixe este pedaço indefinido e vá para o próximo pedaço indefinido |
+| **J** (undefined-next-undef) | Deixe este pedaço indefinido e vá para o próximo pedaço |
+| **k** (undefined-before) | Deixe este pedaço indefinido e vá para o pedaço indefinido anterior |
+| **K** (undefined-before-undef) | Deixe este pedaço indefinido e vá para o pedaço anterior |
+| **s** (split) | Divida o pedaço atual em pedaços menores |
+| **e** (edit) | Edite manualmente o pedaço atual |
+| **?** (help) | Exibe ajuda com informações sobre as opções disponíveis |
+
 ### Ramificação e Fusão :twisted_rightwards_arrows:
 
 | Comando | Descrição |
@@ -61,10 +78,11 @@ Aqui estão alguns comandos adicionais e adequados que você pode incluir na tab
 
 | Comando | Descrição |
 | ------- | ----------- |
+| `git push` | Enviar alterações para o repositório remoto (ramificação lembrada) |
 | `git push origin [nome da ramificação]` | Enviar uma ramificação para o seu repositório remoto |
 | `git push -u origin [nome da ramificação]` | Enviar alterações para o repositório remoto (e lembrar da ramificação) |
-| `git push` | Enviar alterações para o repositório remoto (ramificação lembrada) |
 | `git push origin --delete [nome da ramificação]` | Excluir uma ramificação remota |
+| `git push --force` | Forçar a atualização do repositório remoto (tenha cuidado com esse comando) |
 | `git pull` | Atualizar o repositório local para o commit mais recente |
 | `git pull origin [nome da ramificação]` | Puxar alterações do repositório remoto |
 | `git remote add origin ssh://git@github.com/[nome-de-usuário]/[nome-do-repositório].git` | Adicionar um repositório remoto |
@@ -75,7 +93,6 @@ Aqui estão alguns comandos adicionais e adequados que você pode incluir na tab
 | `git push origin --all` | Enviar todas as ramificações locais para o repositório remoto |
 | `git remote -v` | Listar URLs dos repositórios remotos |
 | `git remote remove origin` | Remover um repositório remoto associado |
-| `git push --force` | Forçar a atualização do repositório remoto (tenha cuidado com esse comando) |
 
 ### Inspeção e Comparação :left_right_arrow:
 

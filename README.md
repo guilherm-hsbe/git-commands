@@ -36,7 +36,7 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 | `git commit -m "[mensagem de commit]"` | Confirmar as alterações |
 | `git rm -r [nome-do-arquivo.txt]` | Remover um arquivo (ou pasta) |
 
-### Staging (Patch Interativo: `add -p`)
+### Staging (Patch Interativo: `add -p`) :arrow_right_hook:
 | Comando | Descrição |
 | ------- | ----------- |
 | **y** (yes) | Adicione esta parte à área de stage |

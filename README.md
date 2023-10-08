@@ -1,4 +1,4 @@
-# Git Commands :octocat: 	
+# Git Commands :octocat:
 > Lista de comandos úteis para a utilização do **git**.
 
 O Git é um sistema de controle de versão distribuído amplamente utilizado para rastrear e gerenciar alterações em projetos de software. Ele foi desenvolvido por Linus Torvalds em 2005 e é uma ferramenta essencial para colaboração e desenvolvimento de código-fonte. Aqui estão alguns pontos-chave sobre o Git:
@@ -84,7 +84,10 @@ Aqui estão alguns comandos adicionais e adequados que você pode incluir na tab
 | `git log` | Ver alterações |
 | `git log --summary` | Ver alterações (detalhadas) |
 | `git log --oneline` | Ver alterações (breve) |
+| `git diff` | Visualizar alterações em todos os arquivos |
 | `git diff [ramificação de origem] [ramificação de destino]` | Visualizar alterações antes da fusão |
+| `git diff [nome-do-arquivo]` | Visualizar alterações não confirmadas em uma arquivo |
+| `git diff [commit-anterior] [commit-atual] -- [nome-do-arquivo]` | Comparar alterações em commits específicos |
 | `git tag` | Adicionar e gerenciar tags de commits |
 | `git reflog` | Exibir o registro de referências e recuperar commits perdidos |
 | `git cherry-pick` | Aplicar commits específicos de uma ramificação para outra |

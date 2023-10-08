@@ -123,7 +123,7 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 | `ssh-keygen -t rsa -b 4096 -C "exemplo@exemplo.com"` | Gerar um novo par de chaves SSH (Nota: Use este você estiver usando um sistema legado que não suporta o **algoritmo Ed25519**) |]
 | `eval "$(ssh-agent -s)"` | Inicializar o serviço do agente-ssh |
 | `ssh-add ~/.ssh/chave-privada` | Adicionar a chave SSH ao agente-ssh |
-| `clip < ~/.ssh/id_ed25519.pub` | Copiar o conteúdo da chave pública para então criar uma nova chave pública na interface do GitHub, e colar o conteúdo da chave (Nota: sem todo sistema possui a mesma nomenclatura de cópia de conteúdo de arquivo) |
+| `clip < ~/.ssh/id_ed25519.pub` | Copiar o conteúdo da chave pública para então criar uma nova chave pública na interface do GitHub, e colar o conteúdo da chave (Nota: nem todo sistema possui a mesma nomenclatura de cópia de conteúdo de arquivo) |
 | `ssh -T git@github.com` | Estalecer conexão da SSH com o GitHub |
 
 #### Gerenciando chaves SSH :toolbox:

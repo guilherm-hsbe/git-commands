@@ -17,7 +17,7 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 
 <hr>
 
-### Obtendo e Criando Projetos
+### Obtendo e Criando Projetos :information_source:
 
 | Comando | Descrição |
 | ------- | ----------- |
@@ -26,54 +26,100 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 | `git clone https://github.com/nome_usuario/nome_repositorio.git` | Também cria uma cópia de um repo remoto, porém sem SSH |
 | `git clone https://github.com/nome_usuario/nome_repositorio.git nome_diretorio_personalizado` | Clonar um repo remóto para um destino customizado |
 
-### Basic Snapshotting
+### Snapshot Básico :hash:
 
-| Command | Description |
+| Comando | Descrição |
 | ------- | ----------- |
-| `git status` | Check status |
-| `git add [file-name.txt]` | Add a file to the staging area |
-| `git add -A` | Add all new and changed files to the staging area |
-| `git commit -m "[commit message]"` | Commit changes |
-| `git rm -r [file-name.txt]` | Remove a file (or folder) |
+| `git status` | Verificar status |
+| `git add [nome-do-arquivo.txt]` | Adicionar um arquivo à área de preparação (staging) |
+| `git add -A` | Adicionar todos os arquivos novos e modificados à área de preparação (staging) |
+| `git commit -m "[mensagem de commit]"` | Confirmar as alterações |
+| `git rm -r [nome-do-arquivo.txt]` | Remover um arquivo (ou pasta) |
 
-### Branching & Merging
+### Ramificação e Fusão :twisted_rightwards_arrows:
 
-| Command | Description |
+| Comando | Descrição |
 | ------- | ----------- |
-| `git branch` | List branches (the asterisk denotes the current branch) |
-| `git branch -a` | List all branches (local and remote) |
-| `git branch [branch name]` | Create a new branch |
-| `git branch -d [branch name]` | Delete a branch |
-| `git push origin --delete [branch name]` | Delete a remote branch |
-| `git checkout -b [branch name]` | Create a new branch and switch to it |
-| `git checkout -b [branch name] origin/[branch name]` | Clone a remote branch and switch to it |
-| `git branch -m [old branch name] [new branch name]` | Rename a local branch |
-| `git checkout [branch name]` | Switch to a branch |
-| `git checkout -` | Switch to the branch last checked out |
-| `git checkout -- [file-name.txt]` | Discard changes to a file |
-| `git merge [branch name]` | Merge a branch into the active branch |
-| `git merge [source branch] [target branch]` | Merge a branch into a target branch |
-| `git stash` | Stash changes in a dirty working directory |
-| `git stash clear` | Remove all stashed entries |
+| `git branch` | Listar ramificações (o asterisco denota a ramificação atual) |
+| `git branch -a` | Listar todas as ramificações (locais e remotas) |
+| `git branch [nome da ramificação]` | Criar uma nova ramificação |
+| `git branch -d [nome da ramificação]` | Excluir uma ramificação |
+| `git push origin --delete [nome da ramificação]` | Excluir uma ramificação remota |
+| `git checkout -b [nome da ramificação]` | Criar uma nova ramificação e alternar para ela |
+| `git checkout -b [nome da ramificação] origin/[nome da ramificação]` | Clonar uma ramificação remota e alternar para ela |
+| `git branch -m [nome da ramificação antiga] [nome da ramificação nova]` | Renomear uma ramificação local |
+| `git checkout [nome da ramificação]` | Alternar para uma ramificação |
+| `git checkout -` | Alternar para a última ramificação verificada |
+| `git checkout -- [nome-do-arquivo.txt]` | Descartar alterações em um arquivo |
+| `git merge [nome da ramificação]` | Fundir uma ramificação na ramificação ativa |
+| `git merge [ramificação de origem] [ramificação de destino]` | Fundir uma ramificação em uma ramificação de destino |
+| `git stash` | Armazenar alterações em um diretório de trabalho sujo |
+| `git stash clear` | Remover todas as entradas armazenadas |
+Aqui estão alguns comandos adicionais e adequados que você pode incluir na tabela "Compartilhando e Atualizando Projetos":
 
-### Sharing & Updating Projects
+### Compartilhando e Atualizando Projetos :arrow_heading_up:
 
-| Command | Description |
+| Comando | Descrição |
 | ------- | ----------- |
-| `git push origin [branch name]` | Push a branch to your remote repository |
-| `git push -u origin [branch name]` | Push changes to remote repository (and remember the branch) |
-| `git push` | Push changes to remote repository (remembered branch) |
-| `git push origin --delete [branch name]` | Delete a remote branch |
-| `git pull` | Update local repository to the newest commit |
-| `git pull origin [branch name]` | Pull changes from remote repository |
-| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Add a remote repository |
-| `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Set a repository's origin branch to SSH |
+| `git push origin [nome da ramificação]` | Enviar uma ramificação para o seu repositório remoto |
+| `git push -u origin [nome da ramificação]` | Enviar alterações para o repositório remoto (e lembrar da ramificação) |
+| `git push` | Enviar alterações para o repositório remoto (ramificação lembrada) |
+| `git push origin --delete [nome da ramificação]` | Excluir uma ramificação remota |
+| `git pull` | Atualizar o repositório local para o commit mais recente |
+| `git pull origin [nome da ramificação]` | Puxar alterações do repositório remoto |
+| `git remote add origin ssh://git@github.com/[nome-de-usuário]/[nome-do-repositório].git` | Adicionar um repositório remoto |
+| `git remote set-url origin ssh://git@github.com/[nome-de-usuário]/[nome-do-repositório].git` | Definir a ramificação de origem de um repositório para SSH |
+| `git fetch` | Buscar as atualizações do repositório remoto |
+| `git pull --rebase` | Atualizar o repositório local com rebase |
+| `git push --tags` | Enviar todas as tags para o repositório remoto |
+| `git push origin --all` | Enviar todas as ramificações locais para o repositório remoto |
+| `git remote -v` | Listar URLs dos repositórios remotos |
+| `git remote remove origin` | Remover um repositório remoto associado |
+| `git push --force` | Forçar a atualização do repositório remoto (tenha cuidado com esse comando) |
 
-### Inspection & Comparison
+### Inspeção e Comparação :left_right_arrow:
 
-| Command | Description |
+| Comando | Descrição |
 | ------- | ----------- |
-| `git log` | View changes |
-| `git log --summary` | View changes (detailed) |
-| `git log --oneline` | View changes (briefly) |
-| `git diff [source branch] [target branch]` | Preview changes before merging |
+| `git log` | Ver alterações |
+| `git log --summary` | Ver alterações (detalhadas) |
+| `git log --oneline` | Ver alterações (breve) |
+| `git diff [ramificação de origem] [ramificação de destino]` | Visualizar alterações antes da fusão |
+| `git tag` | Adicionar e gerenciar tags de commits |
+| `git reflog` | Exibir o registro de referências e recuperar commits perdidos |
+| `git cherry-pick` | Aplicar commits específicos de uma ramificação para outra |
+| `git rebase` | Reorganizar o histórico de commits ou integrar commits de forma flexível |
+| `git blame [nome-do-arquivo]` | Rastrear a autoria de cada linha em um arquivo |
+| `git log --grep [termo]` | Procurar commits que contenham um termo específico no log de commit |
+| `git log -- [caminho-do-arquivo]` | Ver o histórico de commits específico de um arquivo |
+| `git log --stat` | Exibir estatísticas resumidas de cada commit |
+| `git log --abbrev-commit` | Exibir hashes de commit abreviados | 
+
+### Chaves SSH :key:
+
+#### Criando chaves SSH (processo padrão) :lock:
+| Comando | Descrição |
+| ------- | ----------- |
+| `ssh-keygen -t ed25519 -C "email@exemplo.com"` | Gerar um novo par de chaves SSH |
+| `ssh-keygen -t rsa -b 4096 -C "exemplo@exemplo.com"` | Gerar um novo par de chaves SSH (Nota: Use este você estiver usando um sistema legado que não suporta o **algoritmo Ed25519**) |]
+| `eval "$(ssh-agent -s)"` | Inicializar o serviço do agente-ssh |
+| `ssh-add ~/.ssh/chave-privada` | Adicionar a chave SSH ao agente-ssh |
+| `clip < ~/.ssh/id_ed25519.pub` | Copiar o conteúdo da chave pública para então criar uma nova chave pública na interface do GitHub, e colar o conteúdo da chave (Nota: sem todo sistema possui a mesma nomenclatura de cópia de conteúdo de arquivo) |
+| `ssh -T git@github.com` | Estalecer conexão da SSH com o GitHub |
+
+#### Gerenciando chaves SSH :toolbox:
+| Comando | Descrição |
+| ------- | ----------- |
+| `ssh-keygen -p -f ~/.ssh/chave-privada` | Trocar a frase de segurança de uma chave SSH privada |
+| `ssh-keygen -f [caminho-da-chave]` | Gerar um par de chaves SSH com um nome específico |
+| `ssh-copy-id [usuário@host]` | Copiar a chave pública para um servidor remoto |
+| `ssh-add [caminho-da-chave-privada]` | Adicionar uma chave privada à autenticação SSH |
+| `ssh-agent` | Iniciar o agente SSH para gerenciar chaves privadas |
+| `ssh-agent -s` | Configurar o ambiente para usar o agente SSH |
+| `ssh-add -l` | Listar todas as chaves privadas atualmente carregadas no agente SSH |
+| `ssh-add -D` | Remover todas as chaves privadas carregadas no agente SSH |
+| `ssh-keyscan [host] >> ~/.ssh/known_hosts` | Escanear e adicionar a chave pública de um servidor remoto aos hosts conhecidos |
+| `ssh-keygen -R [host]` | Remover a chave pública de um servidor remoto dos hosts conhecidos |
+| `chmod 600 ~/.ssh/id_rsa` | Configurar permissões restritas em uma chave privada |
+| `chmod 644 ~/.ssh/id_rsa.pub` | Configurar permissões em uma chave pública |
+| `ssh-keygen -p -f [caminho-da-chave]` | Alterar a senha de uma chave privada existente |

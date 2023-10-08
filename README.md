@@ -72,7 +72,6 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 | `git merge [ramificação de origem] [ramificação de destino]` | Fundir uma ramificação em uma ramificação de destino |
 | `git stash` | Armazenar alterações em um diretório de trabalho sujo |
 | `git stash clear` | Remover todas as entradas armazenadas |
-Aqui estão alguns comandos adicionais e adequados que você pode incluir na tabela "Compartilhando e Atualizando Projetos":
 
 ### Compartilhando e Atualizando Projetos :arrow_heading_up:
 

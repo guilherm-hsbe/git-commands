@@ -51,7 +51,7 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 | `git commit -m "[mensagem de commit]"` | Confirmar as alterações |
 | `git rm -r [nome-do-arquivo.txt]` | Remover um arquivo (ou pasta) |
 
-### Staging (Patch Interativo: `add -p`)
+### Staging (Patch Interativo: `add -p`) :arrow_right_hook:
 | Comando | Descrição |
 | ------- | ----------- |
 | **y** (yes) | Adicione esta parte à área de stage |
@@ -87,7 +87,6 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 | `git merge [ramificação de origem] [ramificação de destino]` | Fundir uma ramificação em uma ramificação de destino |
 | `git stash` | Armazenar alterações em um diretório de trabalho sujo |
 | `git stash clear` | Remover todas as entradas armazenadas |
-Aqui estão alguns comandos adicionais e adequados que você pode incluir na tabela "Compartilhando e Atualizando Projetos":
 
 ### Compartilhando e Atualizando Projetos :arrow_heading_up:
 
@@ -139,7 +138,7 @@ Aqui estão alguns comandos adicionais e adequados que você pode incluir na tab
 | `ssh-keygen -t rsa -b 4096 -C "exemplo@exemplo.com"` | Gerar um novo par de chaves SSH (Nota: Use este você estiver usando um sistema legado que não suporta o **algoritmo Ed25519**) |]
 | `eval "$(ssh-agent -s)"` | Inicializar o serviço do agente-ssh |
 | `ssh-add ~/.ssh/chave-privada` | Adicionar a chave SSH ao agente-ssh |
-| `clip < ~/.ssh/id_ed25519.pub` | Copiar o conteúdo da chave pública para então criar uma nova chave pública na interface do GitHub, e colar o conteúdo da chave (Nota: sem todo sistema possui a mesma nomenclatura de cópia de conteúdo de arquivo) |
+| `clip < ~/.ssh/id_ed25519.pub` | Copiar o conteúdo da chave pública para então criar uma nova chave pública na interface do GitHub, e colar o conteúdo da chave (Nota: nem todo sistema possui a mesma nomenclatura de cópia de conteúdo de arquivo) |
 | `ssh -T git@github.com` | Estalecer conexão da SSH com o GitHub |
 
 #### Gerenciando chaves SSH :toolbox:

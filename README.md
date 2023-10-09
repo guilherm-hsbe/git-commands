@@ -17,6 +17,21 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 
 <hr>
 
+### Gerenciando Credenciais
+
+| Comando | Descrição |
+| ------- | ----------- |
+| `git config --list` | Lista todas as configurações do Git em seu sistema |
+| `git config user.name "Meu Nome"` | Configurar nome |
+| `git config user.email "meu-email@example.com"` | Configurar email |
+| `git config credential.username "seu-usuario"` | Definir credenciais de nome de usuário HTTPS |
+| `git config credential.helper store` | Definir credenciais de senha HTTPS |
+| `git config --global --unset user.name` | Remover credenciais de usuário globais |
+| `git config --global --unset user.email` | Remover credenciais de email globais |
+| `git config --unset user.name` | Remover credenciais de email locais |
+| `git config --unset user.email` | Remover credenciais de usuário locais |
+| `git credential reject` | Remover credenciais em cache |
+
 ### Obtendo e Criando Projetos :information_source:
 
 | Comando | Descrição |
@@ -130,6 +145,7 @@ Aqui estão alguns comandos adicionais e adequados que você pode incluir na tab
 #### Gerenciando chaves SSH :toolbox:
 | Comando | Descrição |
 | ------- | ----------- |
+| `ssh -T git@github.com` | Verifica se sua chave SSH está configurada corretamente para se comunicar com o GitHub |
 | `ssh-keygen -p -f ~/.ssh/chave-privada` | Trocar a frase de segurança de uma chave SSH privada |
 | `ssh-keygen -f [caminho-da-chave]` | Gerar um par de chaves SSH com um nome específico |
 | `ssh-copy-id [usuário@host]` | Copiar a chave pública para um servidor remoto |

@@ -17,22 +17,7 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 
 <hr>
 
-### Gerenciando Credenciais
-
-| Comando | Descrição |
-| ------- | ----------- |
-| `git config --list` | Lista todas as configurações do Git em seu sistema |
-| `git config user.name "Meu Nome"` | Configurar nome |
-| `git config user.email "meu-email@example.com"` | Configurar email |
-| `git config credential.username "seu-usuario"` | Definir credenciais de nome de usuário HTTPS |
-| `git config credential.helper store` | Definir credenciais de senha HTTPS |
-| `git config --global --unset user.name` | Remover credenciais de usuário globais |
-| `git config --global --unset user.email` | Remover credenciais de email globais |
-| `git config --unset user.name` | Remover credenciais de email locais |
-| `git config --unset user.email` | Remover credenciais de usuário locais |
-| `git credential reject` | Remover credenciais em cache |
-
-### Obtendo e Criando Projetos :information_source:
+### Obtendo e Criando Projetos
 
 | Comando | Descrição |
 | ------- | ----------- |
@@ -41,7 +26,7 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 | `git clone https://github.com/nome_usuario/nome_repositorio.git` | Também cria uma cópia de um repo remoto, porém sem SSH |
 | `git clone https://github.com/nome_usuario/nome_repositorio.git nome_diretorio_personalizado` | Clonar um repo remóto para um destino customizado |
 
-### Snapshot Básico :hash:
+### Snapshot Básico
 
 | Comando | Descrição |
 | ------- | ----------- |
@@ -51,7 +36,7 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 | `git commit -m "[mensagem de commit]"` | Confirmar as alterações |
 | `git rm -r [nome-do-arquivo.txt]` | Remover um arquivo (ou pasta) |
 
-### Staging (Patch Interativo: `add -p`) :arrow_right_hook:
+### Staging (Patch Interativo: `add -p`)
 | Comando | Descrição |
 | ------- | ----------- |
 | **y** (yes) | Adicione esta parte à área de stage |
@@ -68,7 +53,7 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 | **e** (edit) | Edite manualmente o pedaço atual |
 | **?** (help) | Exibe ajuda com informações sobre as opções disponíveis |
 
-### Ramificação e Fusão :twisted_rightwards_arrows:
+### Ramificação e Fusão
 
 | Comando | Descrição |
 | ------- | ----------- |
@@ -88,7 +73,7 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 | `git stash` | Armazenar alterações em um diretório de trabalho sujo |
 | `git stash clear` | Remover todas as entradas armazenadas |
 
-### Compartilhando e Atualizando Projetos :arrow_heading_up:
+### Compartilhando e Atualizando Projetos
 
 | Comando | Descrição |
 | ------- | ----------- |
@@ -108,7 +93,7 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 | `git remote -v` | Listar URLs dos repositórios remotos |
 | `git remote remove origin` | Remover um repositório remoto associado |
 
-### Inspeção e Comparação :left_right_arrow:
+### Inspeção e Comparação
 
 | Comando | Descrição |
 | ------- | ----------- |
@@ -127,11 +112,26 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 | `git log --grep [termo]` | Procurar commits que contenham um termo específico no log de commit |
 | `git log -- [caminho-do-arquivo]` | Ver o histórico de commits específico de um arquivo |
 | `git log --stat` | Exibir estatísticas resumidas de cada commit |
-| `git log --abbrev-commit` | Exibir hashes de commit abreviados | 
+| `git log --abbrev-commit` | Exibir hashes de commit abreviados |
+
+### Gerenciando Credenciais :label:
+
+| Comando | Descrição |
+| ------- | ----------- |
+| `git config --list` | Lista todas as configurações do Git em seu sistema |
+| `git config user.name "Meu Nome"` | Configurar nome |
+| `git config user.email "meu-email@example.com"` | Configurar email |
+| `git config credential.username "seu-usuario"` | Definir credenciais de nome de usuário HTTPS |
+| `git config credential.helper store` | Definir credenciais de senha HTTPS |
+| `git config --global --unset user.name` | Remover credenciais de usuário globais |
+| `git config --global --unset user.email` | Remover credenciais de email globais |
+| `git config --unset user.name` | Remover credenciais de email locais |
+| `git config --unset user.email` | Remover credenciais de usuário locais |
+| `git credential reject` | Remover credenciais em cache |
 
 ### Chaves SSH :key:
 
-#### Criando chaves SSH (processo padrão) :lock:
+#### Criando chaves SSH (processo padrão)
 | Comando | Descrição |
 | ------- | ----------- |
 | `ssh-keygen -t ed25519 -C "email@exemplo.com"` | Gerar um novo par de chaves SSH |
@@ -141,7 +141,7 @@ O Git é um sistema de controle de versão distribuído amplamente utilizado par
 | `clip < ~/.ssh/id_ed25519.pub` | Copiar o conteúdo da chave pública para então criar uma nova chave pública na interface do GitHub, e colar o conteúdo da chave (Nota: nem todo sistema possui a mesma nomenclatura de cópia de conteúdo de arquivo) |
 | `ssh -T git@github.com` | Estalecer conexão da SSH com o GitHub |
 
-#### Gerenciando chaves SSH :toolbox:
+#### Gerenciando chaves SSH
 | Comando | Descrição |
 | ------- | ----------- |
 | `ssh -T git@github.com` | Verifica se sua chave SSH está configurada corretamente para se comunicar com o GitHub |

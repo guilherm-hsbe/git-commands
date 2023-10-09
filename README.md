@@ -1,4 +1,4 @@
-# Git Commands :octocat:
+# Git Commands
 > Lista de comandos úteis para a utilização do **git**.
 
 O Git é um sistema de controle de versão distribuído amplamente utilizado para rastrear e gerenciar alterações em projetos de software. Ele foi desenvolvido por Linus Torvalds em 2005 e é uma ferramenta essencial para colaboração e desenvolvimento de código-fonte. Aqui estão alguns pontos-chave sobre o Git:

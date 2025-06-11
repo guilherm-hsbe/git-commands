@@ -97,6 +97,30 @@
 | `git log --stat` | Exibir estatísticas resumidas de cada commit |
 | `git log --abbrev-commit` | Exibir hashes de commit abreviados |
 
+### Navegação e Histórico no Terminal
+
+| Comando               | Descrição                                    |
+| --------------------- | -------------------------------------------- |
+| `history`             | Lista os comandos usados recentemente        |
+| `!n`                  | Executa o comando de número `n` no histórico |
+| `!!`                  | Executa o último comando novamente           |
+| `Ctrl + r`            | Busca interativa no histórico de comandos    |
+| `clear` ou `Ctrl + l` | Limpa a tela do terminal                     |
+| `cd -`                | Vai para o diretório anterior                |
+
+### Git Log
+
+| Comando                                      | Descrição                                                          |
+| -------------------------------------------- | ------------------------------------------------------------------ |
+| `git log --oneline --graph --decorate --all` | Visualização compacta e completa do histórico com gráfico          |
+| `git show [hash]`                            | Exibe detalhes de um commit específico                             |
+| `git log -p`                                 | Exibe o diff (mudanças de código) junto com cada commit            |
+| `git log --author="nome"`                    | Filtra commits por autor                                           |
+| `git log --since="1 week ago"`               | Mostra commits a partir de uma data                                |
+| `git log --until="2024-12-31"`               | Mostra commits até uma data.                                       |
+| `git log --grep="palavra"`                   | Filtra por palavra-chave na mensagem do commit.                    |
+| `git log <arquivo>`                          | Mostra o histórico de commits que alteraram um arquivo específico. |
+
 ### Gerenciando Credenciais :label:
 
 | Comando | Descrição |
